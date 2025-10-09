@@ -12,8 +12,8 @@ chromadb==0.3.29
 sentence-transformers==2.2.2
 
 # Data processing
-pandas==2.1.1
-numpy==1.26.0
+pandas
+numpy
 requests==2.31.0
 beautifulsoup4==4.12.2
 tqdm==4.66.1
