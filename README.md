@@ -97,3 +97,10 @@ Memory mapping + batches → store the giant book page by page on your computer 
 
 If you want, I can also draw a diagram of this pipeline showing:
 text → token IDs → batch → memory-mapped binary file → ready for LM training.
+
+When would you need train.bin?
+When your dataset is huge (millions of tokens) and won’t fit in RAM.
+Then memory-mapped .bin files are efficient because the model can read batches from disk instead of loading everything at once.
+For small LLM / small dataset, you do not need that Hugging Face .map + memmap code.
+Keeping token IDs in your DataFrame (or saving them with numpy.tofile) is enough.
+You can still build and train your small language model without train.bin.
