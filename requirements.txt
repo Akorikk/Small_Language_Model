@@ -5,7 +5,7 @@ torchaudio==2.3.1
 transformers==4.44.0
 accelerate==0.22.0
 sentencepiece==0.1.99
-
+tiktoken
 # LangChain + RAG / Vector DB
 langchain==0.1.0
 chromadb==0.3.29
